@@ -1,6 +1,7 @@
 from database import SessionLocal
 from models import Dinossauro
 from crud_dinosauros import *
+from datetime import date
 
 db = SessionLocal()
 
@@ -9,8 +10,9 @@ novo = Dinossauro(
     nome="Blue",
     especie_id=1,
     recinto_id=2,
-    peso=1500,
-    altura=3.2,
+    peso=75,
+    altura=1.8,
+    data_nascimento=date(2018, 6, 12),
     sexo="F"
 )
 
