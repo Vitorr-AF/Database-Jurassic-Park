@@ -1,0 +1,161 @@
+{
+  "habitats": [
+    {
+      "nome": "Floresta Tropical",
+      "clima": "úmido",
+      "continente": "América do Sul",
+      "descricao": "Habitat quente e com vegetação densa."
+    },
+    {
+      "nome": "Deserto Jurássico",
+      "clima": "árido",
+      "continente": "África",
+      "descricao": "Região seca com altas temperaturas."
+    }
+  ],
+
+  "recintos": [
+    {
+      "nome": "Recinto A",
+      "area": 1500.50,
+      "capacidade": 5,
+      "clima_controlado": true,
+      "nivel_seguranca": 4
+    },
+    {
+      "nome": "Recinto B",
+      "area": 2000.00,
+      "capacidade": 3,
+      "clima_controlado": false,
+      "nivel_seguranca": 5
+    }
+  ],
+
+  "funcionarios": [
+    {
+      "nome": "Carlos Mendes",
+      "cargo": "Veterinário"
+    },
+    {
+      "nome": "Ana Souza",
+      "cargo": "Segurança"
+    }
+  ],
+
+  "ingressos": [
+    {
+      "tipo": "normal",
+      "preco": 50.00,
+      "data_ingresso": "2026-02-19"
+    },
+    {
+      "tipo": "vip",
+      "preco": 120.00,
+      "data_ingresso": "2026-02-19"
+    }
+  ],
+
+  "especies": [
+    {
+      "nome_pop": "Tiranossauro Rex",
+      "nome_sci": "Tyrannosaurus rex",
+      "periodo": "Cretáceo",
+      "tipo": "carnivoro",
+      "gene_sapo": false,
+      "numero_oficial": 1,
+      "habitat_nome": "Floresta Tropical"
+    },
+    {
+      "nome_pop": "Tricerátopo",
+      "nome_sci": "Triceratops horridus",
+      "periodo": "Cretáceo",
+      "tipo": "herbivoro",
+      "gene_sapo": true,
+      "numero_oficial": 2,
+      "habitat_nome": "Deserto Jurássico"
+    }
+  ],
+
+  "visitantes": [
+    {
+      "nome": "João Silva",
+      "idade": 30,
+      "ingresso_tipo": "normal"
+    },
+    {
+      "nome": "Marina Costa",
+      "idade": 25,
+      "ingresso_tipo": "vip"
+    }
+  ],
+
+  "dinossauros": [
+    {
+      "nome": "Rexy",
+      "especie_nome": "Tiranossauro Rex",
+      "recinto_nome": "Recinto A",
+      "data_nascimento": "2020-05-10",
+      "peso": 8000.50,
+      "altura": 6.20,
+      "sexo": "F"
+    },
+    {
+      "nome": "Spike",
+      "especie_nome": "Tricerátopo",
+      "recinto_nome": "Recinto B",
+      "data_nascimento": "2019-08-15",
+      "peso": 6000.00,
+      "altura": 3.50,
+      "sexo": "M"
+    }
+  ],
+
+  "funcionario_recinto": [
+    {
+      "funcionario_nome": "Carlos Mendes",
+      "recinto_nome": "Recinto A"
+    },
+    {
+      "funcionario_nome": "Ana Souza",
+      "recinto_nome": "Recinto B"
+    }
+  ],
+
+  "compras": [
+    {
+      "visitante_nome": "João Silva",
+      "ingresso_tipo": "normal",
+      "data_compra": "2026-02-19T10:30:00"
+    },
+    {
+      "visitante_nome": "Marina Costa",
+      "ingresso_tipo": "vip",
+      "data_compra": "2026-02-19T11:00:00"
+    }
+  ],
+
+  "incidentes": [
+    {
+      "data": "2026-02-19T14:00:00",
+      "tipo": "Dino escapou brevemente",
+      "dino_nome": "Rexy",
+      "recinto_nome": "Recinto A",
+      "visitante_nome": "João Silva"
+    }
+  ],
+
+  "alimentacao": [
+    {
+      "dino_nome": "Rexy",
+      "data": "2026-02-19T08:00:00",
+      "alimento": "Carne bovina",
+      "quantidade_kg": 120.50
+    },
+    {
+      "dino_nome": "Spike",
+      "data": "2026-02-19T09:00:00",
+      "alimento": "Vegetação fresca",
+      "quantidade_kg": 80.00
+    }
+  ]
+}

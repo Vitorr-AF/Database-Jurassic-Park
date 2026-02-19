@@ -1,9 +1,122 @@
 from sqlalchemy import (
     Column, Integer, String, Numeric, Date, Boolean,
-    ForeignKey, CheckConstraint
+    ForeignKey, CheckConstraint, DateTime, Text
 )
 from sqlalchemy.orm import relationship
 from database import Base
+from datetime import datetime
+
+class Habitat(Base):
+    __tablename__ = "habitats"
+
+    id = Column(Integer, primary_key=True)
+    nome = Column(String(100))
+    clima = Column(String(50))
+    continente = Column(String(50))
+    descricao = Column(String)
+
+    especies = relationship("Especie", back_populates="habitat")
+
+
+class Funcionario(Base):
+    __tablename__ = "funcionarios"
+
+    id = Column(Integer, primary_key=True)
+    nome = Column(String(100), nullable=False)
+    cargo = Column(String(50))
+
+    recintos = relationship(
+        "FuncionarioRecinto",
+        back_populates="funcionario"
+    )
+
+
+class Ingresso(Base):
+    __tablename__ = "ingressos"
+
+    id = Column(Integer, primary_key=True)
+    tipo = Column(String(20))
+    preco = Column(Numeric(8, 2))
+    data_ingresso = Column(Date, nullable=False)
+
+    __table_args__ = (
+        CheckConstraint(
+            "tipo IN ('normal','vip','premium')",
+            name="ingressos_tipo_check"
+        ),
+    )
+
+    visitantes = relationship("Visitante", back_populates="ingresso")
+
+
+class Visitante(Base):
+    __tablename__ = "visitantes"
+
+    id = Column(Integer, primary_key=True)
+    nome = Column(String(100), nullable=False)
+    idade = Column(Integer)
+    ingresso_id = Column(Integer, ForeignKey("ingressos.id"))
+
+    ingresso = relationship("Ingresso", back_populates="visitantes")
+    compras = relationship("Compra", back_populates="visitante")
+    incidentes = relationship("Incidente", back_populates="visitante")
+
+
+class FuncionarioRecinto(Base):
+    __tablename__ = "funcionario_recinto"
+
+    funcionario_id = Column(
+        Integer,
+        ForeignKey("funcionarios.id"),
+        primary_key=True
+    )
+    recinto_id = Column(
+        Integer,
+        ForeignKey("recintos.id"),
+        primary_key=True
+    )
+
+    funcionario = relationship("Funcionario", back_populates="recintos")
+    recinto = relationship("Recinto", backref="funcionarios")
+
+
+class Compra(Base):
+    __tablename__ = "compras"
+
+    id = Column(Integer, primary_key=True)
+    visitante_id = Column(Integer, ForeignKey("visitantes.id"))
+    ingresso_id = Column(Integer, ForeignKey("ingressos.id"))
+    data_compra = Column(DateTime, default=datetime.utcnow, nullable=False)
+
+    visitante = relationship("Visitante", back_populates="compras")
+    ingresso = relationship("Ingresso")
+
+
+class Incidente(Base):
+    __tablename__ = "incidentes"
+
+    id = Column(Integer, primary_key=True)
+    data = Column(DateTime, nullable=False)
+    tipo = Column(String(50))
+    dino_id = Column(Integer, ForeignKey("dinosauros.id"))
+    recinto_id = Column(Integer, ForeignKey("recintos.id"))
+    visitante_id = Column(Integer, ForeignKey("visitantes.id"))
+
+    dinossauro = relationship("Dinossauro")
+    recinto = relationship("Recinto")
+    visitante = relationship("Visitante", back_populates="incidentes")
+
+
+class Alimentacao(Base):
+    __tablename__ = "alimentacao"
+
+    id = Column(Integer, primary_key=True)
+    dino_id = Column(Integer, ForeignKey("dinosauros.id"))
+    data = Column(DateTime, nullable=False)
+    alimento = Column(String(100))
+    quantidade_kg = Column(Numeric(8, 2))
+
+    dinossauro = relationship("Dinossauro")
 
 
 class Especie(Base):
@@ -17,6 +130,9 @@ class Especie(Base):
     gene_sapo = Column(Boolean, default=False)
     numero_oficial = Column(Integer, default=0, nullable=False)
 
+    habitat_id = Column(Integer, ForeignKey("habitats.id"))
+
+    habitat = relationship("Habitat", back_populates="especies")
     dinosauros = relationship("Dinossauro", back_populates="especie")
 
     __table_args__ = (

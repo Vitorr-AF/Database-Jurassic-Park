@@ -131,6 +131,27 @@ novo = Dinossauro(
 )
 ```
 
+## Comandos
+
+### Resetar banco
+
+```bash
+python manage.py reset
+```
+
+### Importar dados
+
+```bash
+python manage.py seed dados.json
+```
+
+### Resetar e importar em sequência
+
+```bash
+python manage.py resetseed dados.json
+```
+
+
 ---
 
 ## 📈 Próximos Passos
