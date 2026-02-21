@@ -1,16 +1,46 @@
 {
   "habitats": [
     {
-      "nome": "Floresta Tropical",
-      "clima": "úmido",
-      "continente": "América do Sul",
-      "descricao": "Habitat quente e com vegetação densa."
+      "nome": "Formação Hell Creek",
+      "clima": "subtropical",
+      "continente": "América do Norte",
+      "descricao": "Região de planícies fluviais com rios, pântanos e florestas abertas, apresentando clima quente e úmido com estações bem definidas."
     },
     {
-      "nome": "Deserto Jurássico",
-      "clima": "árido",
-      "continente": "África",
-      "descricao": "Região seca com altas temperaturas."
+      "nome": "Formação Lance",
+      "clima": "subtropical",
+      "continente": "América do Norte",
+      "descricao": "Área de planícies aluviais e deltas fluviais, com vegetação abundante, rios extensos e clima quente com variações sazonais."
+    },
+    {
+      "nome": "Ilha de Wight",
+      "clima": "temperado",
+      "continente": "Europa",
+      "descricao": "Região costeira com planícies aluviais, florestas baixas e rios, apresentando clima sazonal durante o período Cretáceo."
+    },
+    {
+      "nome": "Deserto de Gobi",
+      "clima": "semiárido",
+      "continente": "Ásia",
+      "descricao": "Região de dunas, planícies áridas e áreas rochosas, com clima seco, variações extremas de temperatura e vegetação escassa."
+    },
+    {
+      "nome": "Formação Morrison",
+      "clima": "semiárido",
+      "continente": "América do Norte",
+      "descricao": "Região composta por planícies fluviais, áreas sazonalmente secas e rios intermitentes, com vegetação baixa e clima quente com períodos de estiagem."
+    },
+    {
+      "nome": "Formação Löwenstein",
+      "clima": "semiárido",
+      "continente": "Europa",
+      "descricao": "Região de planícies secas com rios sazonais e áreas abertas, caracterizada por clima quente e períodos prolongados de estiagem durante o Triássico."
+    },
+    {
+      "nome": "Formação Two Medicine",
+      "clima": "semiárido",
+      "continente": "América do Norte",
+      "descricao": "Região de planícies fluviais com áreas elevadas e vegetação abundante, apresentando clima sazonal com períodos secos e chuvosos durante o Cretáceo."
     }
   ],
 
@@ -62,8 +92,8 @@
       "periodo": "Cretáceo",
       "tipo": "carnivoro",
       "gene_sapo": false,
-      "numero_oficial": 1,
-      "habitat_nome": "Floresta Tropical"
+      "numero_oficial": 2,
+      "habitat_nome": "Formação Hell Creek"
     },
     {
       "nome_pop": "Tricerátopo",
@@ -71,8 +101,53 @@
       "periodo": "Cretáceo",
       "tipo": "herbivoro",
       "gene_sapo": true,
-      "numero_oficial": 2,
-      "habitat_nome": "Deserto Jurássico"
+      "numero_oficial": 8,
+      "habitat_nome": "Formação Lance"
+    },
+    {
+      "nome_pop": "Hipsilofodonte",
+      "nome_sci": "Hypsilophodon foxii",
+      "periodo": "Cretáceo",
+      "tipo": "herbivoro",
+      "gene_sapo": true,
+      "numero_oficial": 33,
+      "habitat_nome": "Ilha de Wight"
+    },
+    {
+      "nome_pop": "Velociraptor",
+      "nome_sci": "Velociraptor mongoliensis",
+      "periodo": "Cretáceo",
+      "tipo": "carnivoro",
+      "gene_sapo": true,
+      "numero_oficial": 8,
+      "habitat_nome": "Deserto de Gobi"
+    },
+    {
+      "nome_pop": "Othnielia",
+      "nome_sci": "Othnielia rex",
+      "periodo": "Jurássico",
+      "tipo": "herbivoro",
+      "gene_sapo": true,
+      "numero_oficial": 16,
+      "habitat_nome": "Formação Morrison"
+    },
+    {
+      "nome_pop": "Procompsognato",
+      "nome_sci": "Procompsognathus triassicus",
+      "periodo": "Triássico",
+      "tipo": "carnivoro",
+      "gene_sapo": true,
+      "numero_oficial": 49,
+      "habitat_nome": "Formação Löwenstein"
+    },
+    {
+      "nome_pop": "Maiassauro",
+      "nome_sci": "Maiasaura peeblesorum",
+      "periodo": "Cretáceo",
+      "tipo": "herbivoro",
+      "gene_sapo": false,
+      "numero_oficial": 21,
+      "habitat_nome": "Formação Two Medicine"
     }
   ],
 
