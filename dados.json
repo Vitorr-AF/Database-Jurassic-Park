@@ -41,6 +41,36 @@
       "clima": "semiárido",
       "continente": "América do Norte",
       "descricao": "Região de planícies fluviais com áreas elevadas e vegetação abundante, apresentando clima sazonal com períodos secos e chuvosos durante o Cretáceo."
+    },
+    {
+      "nome": "Formação Woodbury",
+      "clima": "subtropical",
+      "continente": "América do Norte",
+      "descricao": "Região de planícies costeiras com rios e áreas pantanosas, apresentando clima quente e úmido com vegetação abundante durante o Cretáceo."
+    },
+    {
+      "nome": "Formação Kayenta",
+      "clima": "semiárido",
+      "continente": "América do Norte",
+      "descricao": "Região de planícies fluviais com rios intermitentes e áreas abertas, caracterizada por clima quente e períodos sazonais de seca durante o Jurássico."
+    },
+    {
+      "nome": "Formação Niobrara",
+      "clima": "marinho subtropical",
+      "continente": "América do Norte",
+      "descricao": "Região costeira coberta por mares rasos durante o Cretáceo, com clima quente e abundância de vida marinha."
+    },
+    {
+      "nome": "Formação Dinosaur Park",
+      "clima": "subtropical",
+      "continente": "América do Norte",
+      "descricao": "Região de planícies fluviais com rios, áreas alagadas e vegetação densa, apresentando clima quente e sazonal durante o Cretáceo."
+    },
+    {
+      "nome": "Formação Djadochta",
+      "clima": "semiárido",
+      "continente": "Ásia",
+      "descricao": "Região de dunas e planícies áridas no atual Deserto de Gobi, com clima seco, ventos intensos e vegetação escassa durante o Cretáceo."
     }
   ],
 
@@ -100,7 +130,7 @@
       "nome_sci": "Triceratops horridus",
       "periodo": "Cretáceo",
       "tipo": "herbivoro",
-      "gene_sapo": true,
+      "gene_sapo": false,
       "numero_oficial": 8,
       "habitat_nome": "Formação Lance"
     },
@@ -145,9 +175,81 @@
       "nome_sci": "Maiasaura peeblesorum",
       "periodo": "Cretáceo",
       "tipo": "herbivoro",
-      "gene_sapo": false,
+      "gene_sapo": true,
       "numero_oficial": 21,
       "habitat_nome": "Formação Two Medicine"
+    },
+    {
+      "nome_pop": "Estegossauro",
+      "nome_sci": "Stegosaurus stenops",
+      "periodo": "Jurássico",
+      "tipo": "herbivoro",
+      "gene_sapo": false,
+      "numero_oficial": 4,
+      "habitat_nome": "Formação Morrison"
+    },
+    {
+      "nome_pop": "Apatossauro",
+      "nome_sci": "Apatosaurus louisae",
+      "periodo": "Jurássico",
+      "tipo": "herbivoro",
+      "gene_sapo": false,
+      "numero_oficial": 17,
+      "habitat_nome": "Formação Morrison"
+    },
+    {
+      "nome_pop": "Hadrossauro",
+      "nome_sci": "Hadrosaurus foulkii",
+      "periodo": "Cretáceo",
+      "tipo": "herbivoro",
+      "gene_sapo": false,
+      "numero_oficial": 11,
+      "habitat_nome": "Formação Woodbury"
+    },
+    {
+      "nome_pop": "Dilofossauro",
+      "nome_sci": "Dilophosaurus wetherilli",
+      "periodo": "Jurássico",
+      "tipo": "carnivoro",
+      "gene_sapo": false,
+      "numero_oficial": 7,
+      "habitat_nome": "Formação Kayenta"
+    },
+    {
+      "nome_pop": "Pterossauro",
+      "nome_sci": "Pteranodon longiceps",
+      "periodo": "Cretáceo",
+      "tipo": "carnivoro",
+      "gene_sapo": false,
+      "numero_oficial": 6,
+      "habitat_nome": "Formação Niobrara"
+    },
+    {
+      "nome_pop": "Euplocéfalo",
+      "nome_sci": "Euoplocephalus tutus",
+      "periodo": "Cretáceo",
+      "tipo": "herbivoro",
+      "gene_sapo": false,
+      "numero_oficial": 16,
+      "habitat_nome": "Formação Dinosaur Park"
+    },
+    {
+      "nome_pop": "Estiracossauro",
+      "nome_sci": "Styracosaurus albertensis",
+      "periodo": "Cretáceo",
+      "tipo": "herbivoro",
+      "gene_sapo": false,
+      "numero_oficial": 18,
+      "habitat_nome": "Formação Dinosaur Park"
+    },
+    {
+      "nome_pop": "Microceratus",
+      "nome_sci": "Microceratus gobiensis",
+      "periodo": "Cretáceo",
+      "tipo": "herbivoro",
+      "gene_sapo": false,
+      "numero_oficial": 22,
+      "habitat_nome": "Formação Djadochta"
     }
   ],
 
