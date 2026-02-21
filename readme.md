@@ -8,6 +8,10 @@ a gestão de um parque de dinossauros, inspirado no universo de Jurassic Park.
 O projeto cobre desde a **modelagem do banco em PostgreSQL**
 até um **CRUD utilizando SQLAlchemy ORM**.
 
+Ele também tem um script em Python que pode importar arquivos json automaticamente,
+além de um arquivo `dados.json` de exemplo com informações baseadas no livro de Jurassic Park
+(o arquivo ainda não está completo)
+
 ---
 
 ## 🎯 Objetivo do Projeto
