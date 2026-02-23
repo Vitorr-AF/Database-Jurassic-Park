@@ -167,7 +167,7 @@ class Dinossauro(Base):
     __tablename__ = "dinosauros"
 
     id = Column(Integer, primary_key=True)
-    nome = Column(String(100), nullable=False)
+    nome = Column(String(100), nullable=True)
     especie_id = Column(Integer, ForeignKey("especies.id"))
     recinto_id = Column(Integer, ForeignKey("recintos.id"))
     data_nascimento = Column(Date)

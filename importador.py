@@ -89,8 +89,9 @@ def importar_dados(caminho):
 
         # DINOSSAUROS
         for d in dados.get("dinossauros", []):
-            if db.query(Dinossauro).filter_by(nome=d["nome"]).first():
-                continue
+            if d.get("nome") is not None:
+                if db.query(Dinossauro).filter_by(nome=d["nome"]).first():
+                    continue
 
             especie = db.query(Especie).filter_by(
                 nome_pop=d["especie_nome"]
