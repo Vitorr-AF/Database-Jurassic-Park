@@ -234,7 +234,7 @@ CREATE TABLE public.compras (
 
 CREATE TABLE public.dinosauros (
 	id serial4 NOT NULL,
-	nome varchar(100) NOT NULL,
+	nome varchar(100) NULL,
 	especie_id int4 NULL,
 	data_nascimento date NULL,
 	peso numeric(8, 2) NULL,
